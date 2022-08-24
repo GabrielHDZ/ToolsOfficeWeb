@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, incrementByAmount, selectCount } from "../redux/reducers/counterSlice";
 
-import "../App.css";
-
 interface Recived {
     inicial?: number;
 }
@@ -21,7 +19,7 @@ export function Counter({ inicial = 0 }: Recived) {
     return (
         <>
             <div>
-                <button aria-label="Increment value" className="button" onClick={() => dispatch(increment())}>
+                <button aria-label="Increment value" className="btn-small" onClick={() => dispatch(increment())}>
                     +
                 </button>
                 <span>{count}</span>
@@ -33,7 +31,7 @@ export function Counter({ inicial = 0 }: Recived) {
                 <input aria-label="Set increment amount" value={incrementAmount} onChange={(e) => setIncrementAmount(12)} />
                 <hr />
                 <input type="text" pattern="[a-z]*" placeholder="insert your name" />
-                <button onClick={() => dispatch(incrementByAmount(Number(incrementAmount) || 0))}>
+                <button className="btn-small" onClick={() => dispatch(incrementByAmount(Number(incrementAmount) || 0))}>
                     Add Amount
                 </button>
             </div>
