@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import logo from './logo.svg'
+
 import "papercss"
 import { Counter } from './components/Counter'
 import { Form } from './components/taskForm'
