@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import type { RootState } from '../redux/store/store'
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, incrementByAmount, selectCount } from "../redux/reducers/counterSlice";
 
@@ -12,12 +13,14 @@ const styleButton: React.CSSProperties = {
 };
 //memo
 export function Counter({ inicial = 0 }: Recived) {
+    const menu = useSelector((state: RootState) => state.counter.value)
     const count = useSelector(selectCount);
     const dispatch = useDispatch();
     const [incrementAmount, setIncrementAmount] = useState(inicial);
 
     return (
         <>
+            <span>{menu}</span>
             <div>
                 <button aria-label="Increment value" className="btn-small" onClick={() => dispatch(increment())}>
                     +

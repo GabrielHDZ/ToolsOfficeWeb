@@ -1,8 +1,9 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import counterReducer from './counterSlice';
-import { contadorReducer } from "./contador.reducer";
+import menuTools from "./menuTools";
 
 export default combineReducers({
     counter: counterReducer,
-    contador:contadorReducer
+    menu: menuTools
+
 });
