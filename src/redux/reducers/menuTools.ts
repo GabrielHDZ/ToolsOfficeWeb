@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import type { RootState } from '../store/store'
 
 export interface CounterState {
     value: number
@@ -13,14 +14,14 @@ export const menuTools = createSlice({
     name: 'menu',
     initialState,
     reducers: {
-        positionOne: (state) => {
+        positionOne: state => {
             state.value = 1
         },
-        positionTwo: (state) => {
+        positionTwo: state => {
             state.value = 2
         },
         incrementByAmount: (state, action: PayloadAction<number>) => {
-            state.value += action.payload
+            state.value = action.payload
         },
     },
 })
@@ -28,3 +29,5 @@ export const menuTools = createSlice({
 export const { positionOne, positionTwo, incrementByAmount } = menuTools.actions
 
 export default menuTools.reducer
+
+export const showPosition = (state: RootState) => state.menu.value

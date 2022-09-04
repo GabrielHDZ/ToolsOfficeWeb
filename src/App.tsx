@@ -1,8 +1,8 @@
 
 import "papercss"
 import { Counter } from './components/Counter'
-import { Form } from './components/taskForm'
 import MenuTools from './components/MenuTools'
+import ComponentShow from './components/StateActual'
 
 
 function App() {
@@ -10,8 +10,7 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <MenuTools />
-                <Counter inicial={23} />
-                <Form />
+                <ComponentShow />
             </header>
         </div>
     )

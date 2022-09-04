@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { positionOne, positionTwo } from '../redux/reducers/menuTools'
 
 function MenuTools() {
