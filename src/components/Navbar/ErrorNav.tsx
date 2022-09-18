@@ -1,6 +1,11 @@
 import React from 'react'
 import { useRouteError } from 'react-router-dom';
 
+/**
+ * The ErrorNav function is a React component that displays an error message when the useRouteError
+ * hook returns an error.
+ * @returns The error object is being returned.
+ */
 function ErrorNav() {
     const error: any = useRouteError();
     console.error(error);
